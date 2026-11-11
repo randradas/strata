@@ -43,14 +43,14 @@ The tool: a CLI that scaffolds SDD projects with layered docs.
 _Avoid_: sdd (as the tool name), sdd-init
 
 **Shipped template**:
-File under `src/sdd_init/templates/` (layers); what users get.
+File under `src/strata_sdd/templates/` (layers); what users get.
 _Avoid_: scaffold file
 
 **Repo process files**:
 This repo's own `CLAUDE.md`, `docs/`, `specs/`, `.claude/`.
 
 **Target project**:
-Directory `sdd` writes into.
+Directory `strata` writes into.
 _Avoid_: output dir
 
 **Progressive disclosure**:

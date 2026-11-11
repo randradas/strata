@@ -7,8 +7,8 @@ from pathlib import Path
 
 import pytest
 
-from sdd_init.cli import main
-from sdd_init.scaffold import TEMPLATES
+from strata_sdd.cli import main
+from strata_sdd.scaffold import TEMPLATES
 
 REPO = Path(__file__).resolve().parent.parent
 
@@ -40,8 +40,8 @@ def test_grill_asks_in_rounds(project):
 
 def test_spec_creates_first_then_grills(project):
     text = skill(project, "spec")
-    has_all(text, "sdd spec new", "grill")
-    assert text.index("sdd spec new") < text.index("grill")
+    has_all(text, "strata spec new", "grill")
+    assert text.index("strata spec new") < text.index("grill")
 
 
 # AC2

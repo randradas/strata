@@ -22,6 +22,6 @@ Ideas for the next specs. Each one links to the friction it answers, if any.
 
 | Idea | Answers | Spec |
 |---|---|---|
-| Reverse specs / `sdd init --existing`: adopt SDD on a repo that already has code, record built features without hand edits. | `spec new` assumes a new feature | - |
+| Reverse specs / `strata init --existing`: adopt SDD on a repo that already has code, record built features without hand edits. | `spec new` assumes a new feature | - |
 | Friction-log skill: log a pain point in one step, from any session. | No skill covers the friction log | - |
-| `sdd check`: lint a project for leftover TODOs, a growing root agent file, specs stuck in draft, ACs no task covers. Good for CI. | (none yet; idea) | - |
+| `strata check`: lint a project for leftover TODOs, a growing root agent file, specs stuck in draft, ACs no task covers. Good for CI. | (none yet; idea) | - |

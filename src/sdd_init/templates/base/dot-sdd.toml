@@ -1,3 +1,0 @@
-# Written by `sdd init`. Read by later sdd commands.
-profile = "{{profile}}"
-sdd_version = "{{sdd_version}}"

@@ -4,8 +4,8 @@ from pathlib import Path
 
 import pytest
 
-from sdd_init import __version__, cli
-from sdd_init.cli import main
+from strata_sdd import __version__, cli
+from strata_sdd.cli import main
 
 V01_FILES = {
     "CLAUDE.md",
@@ -25,7 +25,7 @@ V01_FILES = {
     "specs/_template/tasks.md",
 }
 GRILL_FILES = {".claude/skills/grill/SKILL.md", ".claude/skills/grill/LICENSE-mattpocock-skills.md"}
-FULL_FILES = V01_FILES | GRILL_FILES | {".sdd.toml"}
+FULL_FILES = V01_FILES | GRILL_FILES | {".strata.toml"}
 MINIMAL_FILES = {
     "CLAUDE.md",
     "docs/product.md",
@@ -37,7 +37,7 @@ MINIMAL_FILES = {
     "specs/_template/plan.md",
     "specs/_template/spec.md",
     "specs/_template/tasks.md",
-    ".sdd.toml",
+    ".strata.toml",
 } | GRILL_FILES
 
 
@@ -127,13 +127,13 @@ def test_spec_new_in_minimal(tmp_path):
 @pytest.mark.parametrize("profile", ["minimal", "full"])
 def test_profile_recorded(tmp_path, profile):
     init(tmp_path, "--profile", profile)
-    config = tomllib.loads((tmp_path / ".sdd.toml").read_text())
-    assert config == {"profile": profile, "sdd_version": __version__}
+    config = tomllib.loads((tmp_path / ".strata.toml").read_text())
+    assert config == {"profile": profile, "strata_version": __version__}
 
 
 # ADR 0002: only CLAUDE.md may live in more than one layer
 def test_layers_only_overlap_on_claude_md():
-    from sdd_init.scaffold import TEMPLATES, _walk
+    from strata_sdd.scaffold import TEMPLATES, _walk
 
     seen: dict[str, int] = {}
     for layer in TEMPLATES.iterdir():

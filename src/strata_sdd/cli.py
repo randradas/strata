@@ -1,4 +1,4 @@
-"""`sdd` command line entry point."""
+"""`strata` command line entry point."""
 
 from __future__ import annotations
 
@@ -45,7 +45,7 @@ def cmd_init(args: argparse.Namespace) -> int:
     print(f"Scaffolded {len(written)} files in {target}")
     for rel in written:
         print(f"  {rel}")
-    print("\nNext: fill docs/product.md, then run `sdd spec new \"<feature>\"` or /spec in Claude Code.")
+    print("\nNext: fill docs/product.md, then run `strata spec new \"<feature>\"` or /spec in Claude Code.")
     return 0
 
 
@@ -76,7 +76,7 @@ def cmd_profiles(args: argparse.Namespace) -> int:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(prog="sdd", description="Spec driven development scaffolding.")
+    parser = argparse.ArgumentParser(prog="strata", description="Layered specs and context for AI coding agents.")
     parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     sub = parser.add_subparsers(dest="command", required=True)
 
@@ -85,7 +85,7 @@ def build_parser() -> argparse.ArgumentParser:
     p_init.add_argument("--name", help="Project name (default: directory name)")
     p_init.add_argument("--description", help="One-line project description")
     p_init.add_argument("--stack", help="Tech stack summary")
-    p_init.add_argument("--profile", help=f"Scaffold profile (default: {DEFAULT_PROFILE}); see `sdd profiles`")
+    p_init.add_argument("--profile", help=f"Scaffold profile (default: {DEFAULT_PROFILE}); see `strata profiles`")
     p_init.add_argument("-y", "--yes", action="store_true", help="No prompts, use defaults")
     p_init.add_argument("--force", action="store_true", help="Overwrite existing files")
     p_init.set_defaults(func=cmd_init)

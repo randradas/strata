@@ -1,10 +1,11 @@
-# sdd-init
+# strata
 
-CLI (`sdd`) that scaffolds projects for spec driven development with progressive disclosure docs, tuned for Claude Code.
+strata: layered specs and context for AI coding agents.
+CLI (`strata`) that scaffolds SDD (spec driven development) projects with progressive disclosure docs, tuned for Claude Code.
 
 Stack: Python 3.12, stdlib only (argparse, importlib.resources), uv + uv_build, pytest
 
-This repo is built with its own tool: specs here drive changes to `sdd`.
+This repo is built with its own tool: specs here drive changes to `strata`.
 
 ## How we work
 
@@ -15,8 +16,8 @@ Flow: `/spec` -> `/plan` -> `/tasks` -> `/implement`. Details: `specs/README.md`
 
 | Path | What it is | Change it when |
 |---|---|---|
-| `src/sdd_init/templates/` (layers) | **Product.** Files `sdd init` ships to users. | A spec changes what users get. |
-| `CLAUDE.md`, `docs/`, `specs/`, `.claude/` | **This repo's own process.** | We change how we build `sdd`. |
+| `src/strata_sdd/templates/` (layers) | **Product.** Files `strata init` ships to users. | A spec changes what users get. |
+| `CLAUDE.md`, `docs/`, `specs/`, `.claude/` | **This repo's own process.** | We change how we build `strata`. |
 
 A fix to the shipped templates is NOT a fix to this repo's copies, and the reverse. If both should change, say so in the plan.
 
@@ -41,4 +42,4 @@ Full doc index: `docs/README.md`.
 - Write an ADR in `docs/decisions/` only for decisions that are hard to reverse, surprising, and a real trade-off.
 - Keep runtime dependencies at zero unless an ADR says otherwise.
 - Run `uv run pytest` before calling a task done.
-- Hit friction using `sdd` or its skills? Add a line to `docs/friction.md`, keep going.
+- Hit friction using `strata` or its skills? Add a line to `docs/friction.md`, keep going.
