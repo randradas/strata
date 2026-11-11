@@ -5,6 +5,9 @@ Newest first. When an entry becomes a spec, fill the Spec column.
 
 | Date | Friction | Spec |
 |---|---|---|
+| 2026-11-11 | No skill covers ADRs or the friction log; both are written by hand outside the workflow. | - |
+| 2026-11-11 | `/plan` asks for approval but has nowhere to record it (see plan-status entry); skill and template should agree. | - |
+| 2026-11-11 | `/implement` never says to commit; per-task commits in 004 were ad hoc, not part of the skill. | - |
 | 2026-11-11 | Spec acceptance criteria have no ids, so `tasks.md` for 004 had to restate them as AC1-AC10 to map tasks and tests. | - |
 | 2026-11-11 | Workflow says "human approves the plan" but `plan.md` has no status field; approval of 004 plan lives only in chat. | - |
 | 2026-11-11 | Spec template has no home for answered open questions. Drafting 004 needed a hand-added "Decisions" section. | - |
