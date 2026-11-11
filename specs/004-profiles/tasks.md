@@ -12,7 +12,7 @@ AC10 profile recorded
 - [x] T2: Split `templates/project/` into `templates/base/` + `templates/full/` (git mv). Add `profiles.py` with `full` only; `init_project` merges layers. v0.1 tests stay green. (AC1, AC5)
 - [x] T3: Add `templates/minimal/CLAUDE.md`, register `minimal`, add `--profile` with registry validation (exit 1, list names). (AC2, AC4, AC7, AC9)
 - [x] T4: Add `base/dot-sdd.toml` with `profile` and `sdd_version`; pass both as render vars. (AC10)
-- [ ] T5: Interactive profile prompt, default `full`. (AC6)
+- [x] T5: Interactive profile prompt, default `full`. (AC6)
 - [ ] T6: `sdd profiles` command. (AC8)
 - [ ] T7: Plan and implement skills: optional docs read "if it exists". (AC3)
 - [ ] T8: Repo process + docs: this repo's `.sdd.toml` (`profile = "full"`), `docs/architecture.md`, `README.md`.

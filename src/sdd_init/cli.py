@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 
 from . import __version__
-from .profiles import DEFAULT_PROFILE, get_profile
+from .profiles import DEFAULT_PROFILE, PROFILES, get_profile
 from .scaffold import ProjectContext, init_project, list_specs, new_spec
 
 
@@ -22,7 +22,7 @@ def cmd_init(args: argparse.Namespace) -> int:
     target = Path(args.path).resolve()
     interactive = not args.yes and sys.stdin.isatty()
 
-    profile = args.profile or DEFAULT_PROFILE
+    profile = args.profile or ask(f"Profile ({', '.join(PROFILES)})", DEFAULT_PROFILE, interactive)
     try:
         get_profile(profile)
     except ValueError as exc:
