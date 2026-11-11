@@ -5,6 +5,7 @@ Newest first. When an entry becomes a spec, fill the Spec column.
 
 | Date | Friction | Spec |
 |---|---|---|
+| 2026-11-11 | After editing skills mid-session, re-invoking `/spec` loaded the old cached text; had to read the skill file by hand. Skill edits need a new session (or a manual read) to take effect. | - |
 | 2026-11-11 | Headless smoke run of `/spec` proves only round 1; later rounds, decision writing and approval commits need a human in the loop. | - |
 | 2026-11-11 | No skill covers the friction log; entries are written by hand outside the workflow. | - |
 | 2026-11-11 | No skill covers ADRs; they are written by hand outside the workflow. | 005 |

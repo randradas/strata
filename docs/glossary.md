@@ -5,6 +5,10 @@ Format: **Term**: what it is. `_Avoid_:` words that mean the same thing but shou
 
 ## Workflow
 
+**SDD**:
+Spec driven development, the method: spec, then plan, then tasks, then code.
+_Avoid_: ssd
+
 **Spec**:
 What a feature must do and why. No how.
 _Avoid_: PRD, story, ticket
@@ -33,6 +37,10 @@ _Avoid_: requirement, check
 Spec written after the fact to record existing behaviour (`status: done`).
 
 ## This tool
+
+**strata**:
+The tool: a CLI that scaffolds SDD projects with layered docs.
+_Avoid_: sdd (as the tool name), sdd-init
 
 **Shipped template**:
 File under `src/sdd_init/templates/` (layers); what users get.
