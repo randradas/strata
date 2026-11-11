@@ -1,7 +1,7 @@
 ---
 id: 008-logo
 title: Logo
-status: approved
+status: in-progress
 created: 2026-11-11
 ---
 
