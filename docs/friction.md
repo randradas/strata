@@ -5,6 +5,7 @@ Newest first. When an entry becomes a spec, fill the Spec column.
 
 | Date | Friction | Spec |
 |---|---|---|
+| 2026-11-11 | Headless smoke run of `/spec` proves only round 1; later rounds, decision writing and approval commits need a human in the loop. | - |
 | 2026-11-11 | No skill covers ADRs or the friction log; both are written by hand outside the workflow. | - |
 | 2026-11-11 | `/plan` asks for approval but has nowhere to record it (see plan-status entry); skill and template should agree. | - |
 | 2026-11-11 | `/implement` never says to commit; per-task commits in 004 were ad hoc, not part of the skill. | - |

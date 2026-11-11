@@ -1,5 +1,5 @@
 # Tasks: {{title}}
 
-Order matters. Each task: small, testable, maps to an acceptance criterion.
+Order matters. Each task: small, testable, names the acceptance criteria it covers.
 
-- [ ] T1: TODO
+- [ ] T1: TODO (AC1)

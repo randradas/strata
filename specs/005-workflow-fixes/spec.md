@@ -1,7 +1,7 @@
 ---
 id: 005-workflow-fixes
 title: Workflow fixes
-status: draft
+status: done
 created: 2026-11-11
 ---
 
@@ -25,22 +25,22 @@ Commits and ADRs happen ad hoc. The glossary cannot list words to avoid.
 
 Applies to both the shipped templates and this repo's own copies (D4).
 
-- [ ] AC1: Given `/spec`, when it runs, then it creates the spec first, then asks in rounds: every question answerable now, numbered, each with a recommended answer, worded so "yes" accepts it. Facts are looked up, not asked. (D2, D11)
-- [ ] AC2: Given a grill, when a decision is settled, then it is written at once to Decisions with the next `D` id. (D11, D15)
-- [ ] AC3: Given a grill, when no decision is left open or the user says "enough", then it stops; anything still open goes to Open questions. (D5)
-- [ ] AC4: Given a new spec, when created, then it has a Decisions section, and acceptance criteria use `AC1`, `AC2`... ids. (D7, D15)
-- [ ] AC5: Given the spec workflow guide, when read, then it states the id freeze rule: renumber freely in draft; once approved, ids are fixed, dropped items stay struck out, ids are never reused. (D7, D15)
-- [ ] AC6: Given `/plan`, when it runs, then it grills design choices before writing, records them in the plan's Decisions with ids continuing from the spec, and writes plan `status: draft`. (D14, D16)
-- [ ] AC7: Given a plan not marked `status: approved`, when `/tasks` runs, then it stops and asks for approval. (D6)
-- [ ] AC8: Given `/tasks`, when it writes tasks, then each task names the `AC` ids it covers.
-- [ ] AC9: Given a git repo, when `/implement` finishes a task with tests passing, then it commits as `<spec id>: <task number> <summary>`; it also commits on spec or plan approval; it never pushes. (D12)
-- [ ] AC10: Given no git repo, when `/implement` runs, then it skips commits, says so once, and does not create a repo. (D18)
-- [ ] AC11: Given a grill, when a term is settled or a word clashes with the glossary, then the glossary is updated at once or the clash is raised. (D17)
-- [ ] AC12: Given a decision, when an ADR is offered, then only if it is hard to reverse, surprising, and a real trade-off. (D17)
-- [ ] AC13: Given the glossary or decisions folder is missing, when a grill needs it, then the user is asked first; yes creates it with the real entry and adds a row to the root agent file; no keeps the item in Decisions and stops asking for that spec. (D17)
-- [ ] AC14: Given a new project, when scaffolded, then the glossary uses bold term, short definition, `_Avoid_:` synonyms, and the ADR guide uses the short format (title, Status, Date, 1-3 sentences, optional sections). (D8, D9)
-- [ ] AC15: Given adapted grilling text, when shipped, then each adapted skill ends with a one-line credit and its folder holds the full license text. (D10)
-- [ ] AC16: Given specs 001-004 and ADRs 0001-0002, when this ships, then they are unchanged. (D19)
+- [x] AC1: Given `/spec`, when it runs, then it creates the spec first, then asks in rounds: every question answerable now, numbered, each with a recommended answer, worded so "yes" accepts it. Facts are looked up, not asked. (D2, D11)
+- [x] AC2: Given a grill, when a decision is settled, then it is written at once to Decisions with the next `D` id. (D11, D15)
+- [x] AC3: Given a grill, when no decision is left open or the user says "enough", then it stops; anything still open goes to Open questions. (D5)
+- [x] AC4: Given a new spec, when created, then it has a Decisions section, and acceptance criteria use `AC1`, `AC2`... ids. (D7, D15)
+- [x] AC5: Given the spec workflow guide, when read, then it states the id freeze rule: renumber freely in draft; once approved, ids are fixed, dropped items stay struck out, ids are never reused. (D7, D15)
+- [x] AC6: Given `/plan`, when it runs, then it grills design choices before writing, records them in the plan's Decisions with ids continuing from the spec, and writes plan `status: draft`. (D14, D16)
+- [x] AC7: Given a plan not marked `status: approved`, when `/tasks` runs, then it stops and asks for approval. (D6)
+- [x] AC8: Given `/tasks`, when it writes tasks, then each task names the `AC` ids it covers.
+- [x] AC9: Given a git repo, when `/implement` finishes a task with tests passing, then it commits as `<spec id>: <task number> <summary>`; it also commits on spec or plan approval; it never pushes. (D12)
+- [x] AC10: Given no git repo, when `/implement` runs, then it skips commits, says so once, and does not create a repo. (D18)
+- [x] AC11: Given a grill, when a term is settled or a word clashes with the glossary, then the glossary is updated at once or the clash is raised. (D17)
+- [x] AC12: Given a decision, when an ADR is offered, then only if it is hard to reverse, surprising, and a real trade-off. (D17)
+- [x] AC13: Given the glossary or decisions folder is missing, when a grill needs it, then the user is asked first; yes creates it with the real entry and adds a row to the root agent file; no keeps the item in Decisions and stops asking for that spec. (D17)
+- [x] AC14: Given a new project, when scaffolded, then the glossary uses bold term, short definition, `_Avoid_:` synonyms, and the ADR guide uses the short format (title, Status, Date, 1-3 sentences, optional sections). (D8, D9)
+- [x] AC15: Given adapted grilling text, when shipped, then each adapted skill ends with a one-line credit and its folder holds the full license text. (D10)
+- [x] AC16: Given specs 001-004 and ADRs 0001-0002, when this ships, then they are unchanged. (D19)
 
 ## Out of scope
 

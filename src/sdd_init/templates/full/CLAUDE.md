@@ -26,4 +26,4 @@ Full doc index: `docs/README.md`.
 
 - Do not change a spec marked `status: approved` without asking.
 - Tick tasks in `tasks.md` as you finish them.
-- Record new decisions as ADRs in `docs/decisions/`.
+- Write an ADR in `docs/decisions/` only for decisions that are hard to reverse, surprising, and a real trade-off.

@@ -1,10 +1,20 @@
+---
+status: draft
+---
+
 # Plan: {{title}}
 
-Spec: `spec.md` (must be `approved` before this is filled).
+Spec: `spec.md` (must be `approved` before this is filled). Decision ids continue from the spec.
 
 ## Approach
 
 TODO: short design. Link `docs/architecture.md` sections it touches.
+
+## Decisions
+
+Settled while grilling the plan. Newest last.
+
+- DN: TODO
 
 ## Changes
 
@@ -18,4 +28,6 @@ TODO: short design. Link `docs/architecture.md` sections it touches.
 
 ## Test strategy
 
-- TODO: how each acceptance criterion is verified.
+| AC | Check |
+|---|---|
+| AC1 | TODO |

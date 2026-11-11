@@ -24,7 +24,8 @@ V01_FILES = {
     "specs/_template/spec.md",
     "specs/_template/tasks.md",
 }
-FULL_FILES = V01_FILES | {".sdd.toml"}
+GRILL_FILES = {".claude/skills/grill/SKILL.md", ".claude/skills/grill/LICENSE-mattpocock-skills.md"}
+FULL_FILES = V01_FILES | GRILL_FILES | {".sdd.toml"}
 MINIMAL_FILES = {
     "CLAUDE.md",
     "docs/product.md",
@@ -37,7 +38,7 @@ MINIMAL_FILES = {
     "specs/_template/spec.md",
     "specs/_template/tasks.md",
     ".sdd.toml",
-}
+} | GRILL_FILES
 
 
 def init(path: Path, *extra: str) -> int:
