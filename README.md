@@ -11,8 +11,11 @@ Scaffold projects for **spec driven development** with **progressive disclosure*
 ## Install
 
 ```sh
-uv tool install --editable .   # puts `strata` on PATH
+uv tool install git+https://github.com/randradas/strata.git   # puts `strata` on PATH
+uvx --from git+https://github.com/randradas/strata.git strata init my-app   # or run once, no install
 ```
+
+From a local clone: `uv tool install --editable .`
 
 ## Use
 
