@@ -40,8 +40,8 @@ def test_grill_asks_in_rounds(project):
 
 def test_spec_creates_first_then_grills(project):
     text = skill(project, "spec")
-    has_all(text, "sdd spec new", "grill")
-    assert text.index("sdd spec new") < text.index("grill")
+    has_all(text, "strata spec new", "grill")
+    assert text.index("strata spec new") < text.index("grill")
 
 
 # AC2
