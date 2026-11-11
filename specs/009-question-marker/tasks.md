@@ -6,4 +6,4 @@ Order matters. Each task: small, testable, names the acceptance criteria it cove
 - [x] T2: Shipped grill skill: step 3 per D5. (AC1, AC2, AC3)
 - [x] T3: Repo grill skill: same text; sync test green. (AC4)
 - [x] T4: Version 0.4.2 in `pyproject.toml` and `src/strata_sdd/__init__.py` (D7). (AC3)
-- [ ] T5: Checks: `uv run pytest` green; tick ACs, spec `status: done`. (AC1, AC2, AC3, AC4, AC5)
+- [x] T5: Checks: `uv run pytest` green; tick ACs, spec `status: done`. (AC1, AC2, AC3, AC4, AC5)

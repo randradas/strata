@@ -1,7 +1,7 @@
 ---
 id: 009-question-marker
 title: Question marker
-status: in-progress
+status: done
 created: 2026-11-12
 ---
 
@@ -21,11 +21,11 @@ A distinct marker tied to the strata look makes every question easy to spot.
 
 ## Acceptance criteria
 
-- [ ] AC1: Given a grill round, when questions are listed, then each one starts with `◈`, then its number, then the question. (D1, D3)
-- [ ] AC2: Given a grill round, when it shows recommendations, settled decisions or other text, then none of it starts with `◈`. (D4)
-- [ ] AC3: Given a project made by `strata init`, when its grill skill runs, then it uses the marker as in AC1 and AC2. (D2)
-- [ ] AC4: Given this repo, when its own grill skill runs, then it uses the marker as in AC1 and AC2, and it matches the shipped grill skill. (D2)
-- [ ] AC5: Given the glossary, when I look up the marker, then "Question marker" is defined. (D1)
+- [x] AC1: Given a grill round, when questions are listed, then each one starts with `◈`, then its number, then the question. (D1, D3)
+- [x] AC2: Given a grill round, when it shows recommendations, settled decisions or other text, then none of it starts with `◈`. (D4)
+- [x] AC3: Given a project made by `strata init`, when its grill skill runs, then it uses the marker as in AC1 and AC2. (D2)
+- [x] AC4: Given this repo, when its own grill skill runs, then it uses the marker as in AC1 and AC2, and it matches the shipped grill skill. (D2)
+- [x] AC5: Given the glossary, when I look up the marker, then "Question marker" is defined. (D1)
 
 ## Out of scope
 
