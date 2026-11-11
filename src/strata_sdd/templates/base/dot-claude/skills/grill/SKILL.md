@@ -11,7 +11,7 @@ Reach shared understanding. Nothing silently assumed.
 
 1. Map the open decisions as a tree: each decision unlocks the ones that hang off it.
 2. The **frontier** is every decision whose prerequisites are settled. Ask the whole frontier in one round.
-3. Number each question (continue numbering across rounds). Give your recommended answer, and word the question so "yes" accepts it.
+3. Start each question with the question marker `◈`, then its number (continue numbering across rounds), e.g. `◈ 7. Folder. ... Yes?`. Only questions get the marker. Give your recommended answer, and word the question so "yes" accepts it.
 4. Facts are your job: look up code, files and docs yourself (use a sub-agent for big searches). Only decisions go to the user.
 5. Wait for answers. Recompute the frontier. Next round.
 

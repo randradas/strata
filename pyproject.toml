@@ -1,6 +1,6 @@
 [project]
 name = "strata-sdd"
-version = "0.4.1"
+version = "0.4.2"
 description = "strata: layered specs and context for AI coding agents."
 readme = "README.md"
 license = "MIT"
