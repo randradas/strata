@@ -9,6 +9,7 @@ from importlib.resources import files
 from importlib.resources.abc import Traversable
 from pathlib import Path
 
+from . import __version__
 from .profiles import DEFAULT_PROFILE, get_profile
 
 TEMPLATES = files("sdd_init") / "templates"
@@ -29,6 +30,8 @@ class ProjectContext:
             "description": self.description,
             "stack": self.stack,
             "date": date.today().isoformat(),
+            "profile": self.profile,
+            "sdd_version": __version__,
         }
 
 
