@@ -25,6 +25,10 @@ _Avoid_: step, todo
 Round-based interview that settles every open decision of a spec or plan before writing it.
 _Avoid_: interview, Q&A
 
+**Question marker**:
+The `◈` symbol that opens each grill question, so questions stand out from other text.
+_Avoid_: bullet, icon, prompt symbol
+
 **Decision**:
 A settled choice in a spec or plan, with an id (`D1`...) unique within its spec folder.
 _Avoid_: choice, answer
