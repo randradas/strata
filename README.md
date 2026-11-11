@@ -1,3 +1,8 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/logo/strata-lockup-on-dark.svg">
+  <img src="assets/logo/strata-lockup-on-light.svg" alt="strata" width="234">
+</picture>
+
 # strata
 
 > strata: layered specs and context for AI coding agents.
