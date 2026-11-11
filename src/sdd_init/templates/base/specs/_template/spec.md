@@ -17,11 +17,17 @@ TODO: who has what pain, and why now.
 
 ## Acceptance criteria
 
-- [ ] Given <context>, when <action>, then <result>.
+- [ ] AC1: Given <context>, when <action>, then <result>. (D1)
 
 ## Out of scope
 
 - TODO
+
+## Decisions
+
+Settled while grilling. Newest last.
+
+- D1: TODO
 
 ## Open questions
 
