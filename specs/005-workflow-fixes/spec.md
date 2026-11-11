@@ -1,7 +1,7 @@
 ---
 id: 005-workflow-fixes
 title: Workflow fixes
-status: draft
+status: approved
 created: 2026-11-11
 ---
 
