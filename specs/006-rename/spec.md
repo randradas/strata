@@ -1,7 +1,7 @@
 ---
 id: 006-rename
 title: Rename
-status: draft
+status: approved
 created: 2026-11-11
 ---
 
@@ -27,7 +27,7 @@ is easy to swap with "ssd". The name should say what the tool is about: layered 
 - [ ] AC5: Given a new project, when scaffolded, then its config file is named after `strata` and records profile and version as before. (D3)
 - [ ] AC6: Given this repo, when the spec is done, then its own process files, docs, glossary and README use `strata`, and the glossary defines SDD and strata. (D3, D4, D5)
 - [ ] AC7: Given this repo, when the spec is merged, then the user gets exact commands to rename the folder and reinstall. (D7)
-- [ ] AC8: Given specs 001-005 and ADRs 0001-0002, when this ships, then they are unchanged; they keep the old name as history.
+- [ ] AC8: Given specs 001-005 and ADRs 0001-0002, when this ships, then they are unchanged; they keep the old name as history. (D10)
 
 ## Out of scope
 
@@ -48,6 +48,7 @@ Settled while grilling. Newest last.
 - D7: The repo folder is renamed last, after the merge, by the user, with commands given by the agent; then the tool is reinstalled from the new folder.
 - D8: Tagline: "strata: layered specs and context for AI coding agents."
 - D9: Version 0.4.0, a minor bump, because the old command breaks.
+- D10: Old specs and accepted ADRs keep the old name; they describe the tool as it was.
 
 ## Open questions
 
