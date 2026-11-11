@@ -1,8 +1,14 @@
 [project]
 name = "strata-sdd"
-version = "0.4.0"
+version = "0.4.1"
 description = "strata: layered specs and context for AI coding agents."
 readme = "README.md"
+license = "MIT"
+license-files = [
+    "LICENSE",
+    "LICENSE-GENERATED.md",
+    "src/strata_sdd/templates/base/dot-claude/skills/grill/LICENSE-mattpocock-skills.md",
+]
 authors = [
     { name = "Roberto Andradas Izquierdo", email = "randradas@gmail.com" }
 ]
