@@ -15,5 +15,5 @@ AC10 profile recorded
 - [x] T5: Interactive profile prompt, default `full`. (AC6)
 - [x] T6: `sdd profiles` command. (AC8)
 - [x] T7: Plan and implement skills: optional docs read "if it exists". (AC3)
-- [ ] T8: Repo process + docs: this repo's `.sdd.toml` (`profile = "full"`), `docs/architecture.md`, `README.md`.
+- [x] T8: Repo process + docs: this repo's `.sdd.toml` (`profile = "full"`), `docs/architecture.md`, `README.md`.
 - [ ] T9: Full `uv run pytest`, tick every AC in `spec.md`, set `status: done`.
