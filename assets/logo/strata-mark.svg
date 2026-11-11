@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="strata">
+  <style>
+    .top { fill: #E8743B; }
+    .mid { fill: #6B7385; }
+    .base { fill: #14171F; }
+    @media (prefers-color-scheme: dark) {
+      .mid { fill: #8C95A6; }
+      .base { fill: #F2F3F5; }
+    }
+  </style>
+  <polygon class="base" points="32,28 56,40 32,52 8,40"/>
+  <polygon class="mid" points="32,18 56,30 32,42 8,30"/>
+  <polygon class="top" points="32,8 56,20 32,32 8,20"/>
+</svg>
