@@ -2,7 +2,7 @@
 
 Order matters. Each task names the acceptance criteria it covers.
 
-- [ ] T1: Failing tests: content checks per AC, `grill` files in profile file sets, drift test. (AC1-AC15)
+- [x] T1: Failing tests: content checks per AC, `grill` files in profile file sets, drift test. (AC1-AC15)
 - [ ] T2: `grill` skill + license file. (AC1, AC2, AC3, AC11, AC12, AC13, AC15)
 - [ ] T3: Spec template (`AC1:` ids, Decisions) + `/spec` skill (create first, run grill). (AC1, AC4)
 - [ ] T4: Plan template (status, Decisions) + `/plan` skill (refuse unapproved spec, grill, ids continue, ADR test). (AC6, AC12)
