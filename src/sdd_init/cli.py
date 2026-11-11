@@ -7,6 +7,7 @@ import sys
 from pathlib import Path
 
 from . import __version__
+from .profiles import DEFAULT_PROFILE, PROFILES, get_profile
 from .scaffold import ProjectContext, init_project, list_specs, new_spec
 
 
@@ -21,10 +22,18 @@ def cmd_init(args: argparse.Namespace) -> int:
     target = Path(args.path).resolve()
     interactive = not args.yes and sys.stdin.isatty()
 
+    profile = args.profile or ask(f"Profile ({', '.join(PROFILES)})", DEFAULT_PROFILE, interactive)
+    try:
+        get_profile(profile)
+    except ValueError as exc:
+        print(exc, file=sys.stderr)
+        return 1
+
     ctx = ProjectContext(
         name=args.name or ask("Project name", target.name, interactive),
         description=args.description or ask("One-line description", "TODO: describe the project", interactive),
         stack=args.stack or ask("Tech stack", "TODO: list languages, frameworks, infra", interactive),
+        profile=profile,
     )
 
     try:
@@ -59,6 +68,13 @@ def cmd_spec_list(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_profiles(args: argparse.Namespace) -> int:
+    for profile in PROFILES.values():
+        marker = " (default)" if profile.name == DEFAULT_PROFILE else ""
+        print(f"{profile.name:<10} {profile.description}{marker}")
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="sdd", description="Spec driven development scaffolding.")
     parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
@@ -69,9 +85,13 @@ def build_parser() -> argparse.ArgumentParser:
     p_init.add_argument("--name", help="Project name (default: directory name)")
     p_init.add_argument("--description", help="One-line project description")
     p_init.add_argument("--stack", help="Tech stack summary")
+    p_init.add_argument("--profile", help=f"Scaffold profile (default: {DEFAULT_PROFILE}); see `sdd profiles`")
     p_init.add_argument("-y", "--yes", action="store_true", help="No prompts, use defaults")
     p_init.add_argument("--force", action="store_true", help="Overwrite existing files")
     p_init.set_defaults(func=cmd_init)
+
+    p_profiles = sub.add_parser("profiles", help="List scaffold profiles")
+    p_profiles.set_defaults(func=cmd_profiles)
 
     p_spec = sub.add_parser("spec", help="Work with specs")
     spec_sub = p_spec.add_subparsers(dest="spec_command", required=True)

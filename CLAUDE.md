@@ -15,7 +15,7 @@ Flow: `/spec` -> `/plan` -> `/tasks` -> `/implement`. Details: `specs/README.md`
 
 | Path | What it is | Change it when |
 |---|---|---|
-| `src/sdd_init/templates/project/` | **Product.** Files `sdd init` ships to users. | A spec changes what users get. |
+| `src/sdd_init/templates/` (layers) | **Product.** Files `sdd init` ships to users. | A spec changes what users get. |
 | `CLAUDE.md`, `docs/`, `specs/`, `.claude/` | **This repo's own process.** | We change how we build `sdd`. |
 
 A fix to the shipped templates is NOT a fix to this repo's copies, and the reverse. If both should change, say so in the plan.
