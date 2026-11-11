@@ -68,6 +68,13 @@ def cmd_spec_list(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_profiles(args: argparse.Namespace) -> int:
+    for profile in PROFILES.values():
+        marker = " (default)" if profile.name == DEFAULT_PROFILE else ""
+        print(f"{profile.name:<10} {profile.description}{marker}")
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="sdd", description="Spec driven development scaffolding.")
     parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
@@ -82,6 +89,9 @@ def build_parser() -> argparse.ArgumentParser:
     p_init.add_argument("-y", "--yes", action="store_true", help="No prompts, use defaults")
     p_init.add_argument("--force", action="store_true", help="Overwrite existing files")
     p_init.set_defaults(func=cmd_init)
+
+    p_profiles = sub.add_parser("profiles", help="List scaffold profiles")
+    p_profiles.set_defaults(func=cmd_profiles)
 
     p_spec = sub.add_parser("spec", help="Work with specs")
     spec_sub = p_spec.add_subparsers(dest="spec_command", required=True)
