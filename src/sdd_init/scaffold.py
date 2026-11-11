@@ -9,6 +9,8 @@ from importlib.resources import files
 from importlib.resources.abc import Traversable
 from pathlib import Path
 
+from .profiles import DEFAULT_PROFILE, get_profile
+
 TEMPLATES = files("sdd_init") / "templates"
 PLACEHOLDER = re.compile(r"\{\{\s*(\w+)\s*\}\}")
 SPEC_DIR = re.compile(r"^(\d{3})-")
@@ -19,6 +21,7 @@ class ProjectContext:
     name: str
     description: str
     stack: str
+    profile: str = DEFAULT_PROFILE
 
     def as_vars(self) -> dict[str, str]:
         return {
@@ -49,10 +52,19 @@ def _target_name(rel: Path) -> Path:
     return path.with_suffix("") if path.suffix == ".tmpl" else path
 
 
+def plan_files(profile: str) -> list[tuple[Path, Traversable]]:
+    """Merge the profile's layers in order; later layers override same paths."""
+    merged: dict[Path, Traversable] = {}
+    for layer in get_profile(profile).layers:
+        for rel, src in _walk(TEMPLATES / layer):
+            merged[_target_name(rel)] = src
+    return sorted(merged.items())
+
+
 def init_project(target: Path, ctx: ProjectContext, force: bool = False) -> list[Path]:
     """Write the project skeleton. Return written paths (relative)."""
     variables = ctx.as_vars()
-    planned = [(_target_name(rel), src) for rel, src in _walk(TEMPLATES / "project")]
+    planned = plan_files(ctx.profile)
 
     if not force:
         clashes = [rel for rel, _ in planned if (target / rel).exists()]
