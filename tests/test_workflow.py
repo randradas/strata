@@ -7,8 +7,8 @@ from pathlib import Path
 
 import pytest
 
-from sdd_init.cli import main
-from sdd_init.scaffold import TEMPLATES
+from strata_sdd.cli import main
+from strata_sdd.scaffold import TEMPLATES
 
 REPO = Path(__file__).resolve().parent.parent
 

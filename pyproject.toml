@@ -1,7 +1,7 @@
 [project]
-name = "sdd-init"
-version = "0.3.0"
-description = "Scaffold projects for spec driven development with progressive disclosure docs for Claude Code"
+name = "strata-sdd"
+version = "0.4.0"
+description = "strata: layered specs and context for AI coding agents."
 readme = "README.md"
 authors = [
     { name = "Roberto Andradas Izquierdo", email = "randradas@gmail.com" }
@@ -10,7 +10,7 @@ requires-python = ">=3.12"
 dependencies = []
 
 [project.scripts]
-sdd = "sdd_init.cli:main"
+strata = "strata_sdd.cli:main"
 
 [dependency-groups]
 dev = ["pytest>=8"]

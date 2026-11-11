@@ -12,7 +12,7 @@ from pathlib import Path
 from . import __version__
 from .profiles import DEFAULT_PROFILE, get_profile
 
-TEMPLATES = files("sdd_init") / "templates"
+TEMPLATES = files("strata_sdd") / "templates"
 PLACEHOLDER = re.compile(r"\{\{\s*(\w+)\s*\}\}")
 SPEC_DIR = re.compile(r"^(\d{3})-")
 
@@ -31,7 +31,7 @@ class ProjectContext:
             "stack": self.stack,
             "date": date.today().isoformat(),
             "profile": self.profile,
-            "sdd_version": __version__,
+            "strata_version": __version__,
         }
 
 
@@ -103,7 +103,7 @@ def new_spec(root: Path, title: str) -> Path:
     specs_dir = root / "specs"
     template_dir = specs_dir / "_template"
     if not template_dir.is_dir():
-        raise FileNotFoundError(f"No {template_dir} found. Run `sdd init` first.")
+        raise FileNotFoundError(f"No {template_dir} found. Run `strata init` first.")
 
     spec_id = f"{next_spec_number(specs_dir):03d}-{slugify(title)}"
     dest = specs_dir / spec_id

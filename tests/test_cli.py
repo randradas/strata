@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from sdd_init.cli import main
+from strata_sdd.cli import main
 
 
 def init(tmp_path: Path, *extra: str) -> int:
