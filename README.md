@@ -46,3 +46,11 @@ uv run pytest
 
 Templates live in `src/strata_sdd/templates/<layer>/` (`base`, `full`, `minimal`). Profiles pick layers in
 `src/strata_sdd/profiles.py`. Prefix `dot-` becomes `.` on output.
+
+## License
+
+strata is MIT licensed, see [`LICENSE`](LICENSE).
+
+Files `strata` writes into your project are yours: no strata notice to keep
+([`LICENSE-GENERATED.md`](LICENSE-GENERATED.md)). Exception: the `grill` skill adapts text from
+Matt Pocock's skills and ships with its own MIT license file; keep it with the skill.
