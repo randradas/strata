@@ -21,7 +21,7 @@ def old_name_hits(root: Path, paths) -> list[str]:
     hits = []
     for path in paths:
         for n, line in enumerate(path.read_text().splitlines(), 1):
-            if OLD_NAME.search(line):
+            if OLD_NAME.search(line) and not line.startswith("_Avoid_:"):
                 hits.append(f"{path.relative_to(root)}:{n}: {line.strip()}")
     return hits
 

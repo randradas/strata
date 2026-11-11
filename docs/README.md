@@ -8,4 +8,4 @@ Keep each doc focused. Link out instead of growing a file past ~200 lines.
 - `conventions.md` - code style, testing, git workflow
 - `glossary.md` - domain language, one line per term
 - `decisions/` - ADRs, one decision per file
-- `friction.md` - pain points found using `sdd` on itself; backlog input
+- `friction.md` - pain points found using `strata` on itself; backlog input

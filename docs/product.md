@@ -1,6 +1,8 @@
-# Product: sdd-init
+# Product: strata
 
-CLI (`sdd`) that scaffolds projects for spec driven development with progressive disclosure docs, tuned for Claude Code.
+strata: layered specs and context for AI coding agents.
+CLI (`strata`) that scaffolds SDD (spec driven development) projects with progressive disclosure docs, tuned for Claude Code.
+The name: strata are layers; the tool gives agents context in layers, read only as deep as a task needs.
 
 ## Problem
 
@@ -28,5 +30,5 @@ Setting up a spec workflow and a layered doc structure by hand takes time, and e
 
 ## Success measures
 
-- `sdd init` on an empty dir produces a skeleton Claude Code can follow with no extra setup.
-- This repo is developed using `sdd` itself without workarounds.
+- `strata init` on an empty dir produces a skeleton Claude Code can follow with no extra setup.
+- This repo is developed using `strata` itself without workarounds.

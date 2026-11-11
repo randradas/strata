@@ -32,7 +32,7 @@ Each feature lives in `specs/NNN-slug/` with three files:
 ## Create one
 
 ```sh
-sdd spec new "Feature title"
+strata spec new "Feature title"
 ```
 
 Or in Claude Code: `/spec Feature title`.

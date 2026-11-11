@@ -1,4 +1,6 @@
-# sdd-init
+# strata
+
+> strata: layered specs and context for AI coding agents.
 
 Scaffold projects for **spec driven development** with **progressive disclosure** docs, tuned for Claude Code.
 
@@ -9,25 +11,25 @@ Scaffold projects for **spec driven development** with **progressive disclosure*
 ## Install
 
 ```sh
-uv tool install --editable .   # puts `sdd` on PATH
+uv tool install --editable .   # puts `strata` on PATH
 ```
 
 ## Use
 
 ```sh
-sdd init my-app                 # prompts for profile, name, description, stack
-sdd init . -y --name X          # no prompts, full profile
-sdd init app --profile minimal  # small scaffold: product doc, specs, skills
-sdd profiles                    # list profiles
-sdd spec new "User login"       # specs/001-user-login/{spec,plan,tasks}.md
-sdd spec list                   # ids + status
+strata init my-app                 # prompts for profile, name, description, stack
+strata init . -y --name X          # no prompts, full profile
+strata init app --profile minimal  # small scaffold: product doc, specs, skills
+strata profiles                    # list profiles
+strata spec new "User login"       # specs/001-user-login/{spec,plan,tasks}.md
+strata spec list                   # ids + status
 ```
 
 ## Generated layout (`full` profile)
 
 ```
 CLAUDE.md                 # short map, hard rules
-.sdd.toml                 # records profile and sdd version
+.strata.toml              # records profile and strata version
 docs/                     # product, architecture, conventions, glossary, ADRs
 specs/README.md           # workflow and lifecycle
 specs/_template/          # spec/plan/tasks templates (edit freely)
@@ -42,5 +44,5 @@ specs/_template/          # spec/plan/tasks templates (edit freely)
 uv run pytest
 ```
 
-Templates live in `src/sdd_init/templates/<layer>/` (`base`, `full`, `minimal`). Profiles pick layers in
-`src/sdd_init/profiles.py`. Prefix `dot-` becomes `.` on output.
+Templates live in `src/strata_sdd/templates/<layer>/` (`base`, `full`, `minimal`). Profiles pick layers in
+`src/strata_sdd/profiles.py`. Prefix `dot-` becomes `.` on output.

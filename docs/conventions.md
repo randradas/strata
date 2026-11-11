@@ -9,7 +9,7 @@
 ## Tests
 
 - Every task in `tasks.md` ships with tests that prove its acceptance criteria.
-- Test through `sdd_init.cli.main([...])` with `tmp_path`; avoid mocking the filesystem.
+- Test through `strata_sdd.cli.main([...])` with `tmp_path`; avoid mocking the filesystem.
 - Run: `uv run pytest`.
 
 ## Git
