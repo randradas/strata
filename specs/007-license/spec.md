@@ -1,7 +1,7 @@
 ---
 id: 007-license
 title: License
-status: in-progress
+status: done
 created: 2026-11-11
 ---
 
@@ -22,13 +22,13 @@ docs. Nobody wants that, and it would put people off.
 
 ## Acceptance criteria
 
-- [ ] AC1: Given the repo, when I look at its root, then I find the standard MIT license text, unchanged, with the line "Copyright (c) 2026 Roberto Andradas Izquierdo". (D1, D5, D6)
-- [ ] AC2: Given the repo, when I look next to the license, then a short statement says files strata writes into a target project belong to the user and need no strata notice. (D2, D6)
-- [ ] AC3: Given that statement, when I read it, then it says text adapted from others keeps its own license and notice, and it names the grill skill. (D4)
-- [ ] AC4: Given the built package, when I read its metadata, then it says MIT and includes the license text and the statement. (D1, D2, D8)
-- [ ] AC5: Given the built package, when I read its version, then it is 0.4.1. (D8)
-- [ ] AC6: Given the README, when I read it, then a License section names MIT, gives the D2 promise and notes the third-party text. (D7)
-- [ ] AC7: Given a new project, when scaffolded, then it gets no strata license or notice file, and the grill skill still ships with its own license file. (D2, D3, D4)
+- [x] AC1: Given the repo, when I look at its root, then I find the standard MIT license text, unchanged, with the line "Copyright (c) 2026 Roberto Andradas Izquierdo". (D1, D5, D6)
+- [x] AC2: Given the repo, when I look next to the license, then a short statement says files strata writes into a target project belong to the user and need no strata notice. (D2, D6)
+- [x] AC3: Given that statement, when I read it, then it says text adapted from others keeps its own license and notice, and it names the grill skill. (D4)
+- [x] AC4: Given the built package, when I read its metadata, then it says MIT and includes the license text and the statement. (D1, D2, D8)
+- [x] AC5: Given the built package, when I read its version, then it is 0.4.1. (D8)
+- [x] AC6: Given the README, when I read it, then a License section names MIT, gives the D2 promise and notes the third-party text. (D7)
+- [x] AC7: Given a new project, when scaffolded, then it gets no strata license or notice file, and the grill skill still ships with its own license file. (D2, D3, D4)
 
 ## Out of scope
 
