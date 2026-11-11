@@ -1,7 +1,7 @@
 ---
 id: 007-license
 title: License
-status: approved
+status: in-progress
 created: 2026-11-11
 ---
 

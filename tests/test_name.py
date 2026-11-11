@@ -42,7 +42,7 @@ def test_cli_is_named_strata(capsys):
 def test_package_metadata():
     project = pyproject()
     assert project["name"] == "strata-sdd"
-    assert project["version"] == __version__ == "0.4.0"
+    assert project["version"] == __version__ == "0.4.1"
     assert project["description"] == TAGLINE
     assert project["scripts"] == {"strata": "strata_sdd.cli:main"}
 
