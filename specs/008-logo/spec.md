@@ -1,7 +1,7 @@
 ---
 id: 008-logo
 title: Logo
-status: in-progress
+status: done
 created: 2026-11-11
 ---
 
@@ -20,14 +20,14 @@ A logo makes the project recognizable on GitHub and anywhere it is linked.
 
 ## Acceptance criteria
 
-- [ ] AC1: Given the repo, when I look for the logo, then I find four versions: mark alone, mark with name for light grounds, mark with name for dark grounds, and a small icon. (D1, D3)
-- [ ] AC2: Given any version, when I compare it with the chosen concept, then shapes and colors match D1. (D1)
-- [ ] AC3: Given the README on GitHub in light theme, when the page loads, then the light-ground lockup shows at the top; in dark theme, the dark-ground lockup shows. (D3, D4)
-- [ ] AC4: Given the README, when read by a screen reader or a search engine, then the logo has text alternative "strata" and the page title is still plain text. (D4)
-- [ ] AC5: Given a machine without the Space Grotesk font, when a lockup is viewed, then the name looks the same as on a machine that has it. (D5)
-- [ ] AC6: Given the small icon shown at 16 pixels, when viewed, then the three plates are still distinct. (D6)
-- [ ] AC7: Given a project made by `strata init`, when I list its files, then no logo file is present. (D2)
-- [ ] AC8: Given the license, when I read it, then it covers the logo files with the rest of the repo. (D7)
+- [x] AC1: Given the repo, when I look for the logo, then I find four versions: mark alone, mark with name for light grounds, mark with name for dark grounds, and a small icon. (D1, D3)
+- [x] AC2: Given any version, when I compare it with the chosen concept, then shapes and colors match D1. (D1)
+- [x] AC3: Given the README on GitHub in light theme, when the page loads, then the light-ground lockup shows at the top; in dark theme, the dark-ground lockup shows. (D3, D4)
+- [x] AC4: Given the README, when read by a screen reader or a search engine, then the logo has text alternative "strata" and the page title is still plain text. (D4)
+- [x] AC5: Given a machine without the Space Grotesk font, when a lockup is viewed, then the name looks the same as on a machine that has it. (D5)
+- [x] AC6: Given the small icon shown at 16 pixels, when viewed, then the three plates are still distinct. (D6)
+- [x] AC7: Given a project made by `strata init`, when I list its files, then no logo file is present. (D2)
+- [x] AC8: Given the license, when I read it, then it covers the logo files with the rest of the repo. (D7)
 
 ## Out of scope
 
