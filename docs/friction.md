@@ -1,0 +1,8 @@
+# Friction log
+
+Pain points found while building `sdd` with `sdd`. Log them when hit; do not fix on the spot.
+Newest first. When an entry becomes a spec, fill the Spec column.
+
+| Date | Friction | Spec |
+|---|---|---|
+| 2026-11-11 | `spec new` assumes a new feature. Recording already-built features (reverse specs 001-003) needed hand-written `plan.md`/`tasks.md` and manual `status: done`. Same wall for anyone adopting SDD on existing code. | - |

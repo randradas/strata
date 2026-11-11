@@ -29,6 +29,7 @@ A fix to the shipped templates is NOT a fix to this repo's copies, and the rever
 | Code style, testing, commits | `docs/conventions.md` |
 | Domain terms | `docs/glossary.md` |
 | Past decisions | `docs/decisions/` |
+| Known pain points, backlog ideas | `docs/friction.md` |
 | Feature work, past and current | `specs/NNN-*/` |
 
 Full doc index: `docs/README.md`.
@@ -40,3 +41,4 @@ Full doc index: `docs/README.md`.
 - Record new decisions as ADRs in `docs/decisions/`.
 - Keep runtime dependencies at zero unless an ADR says otherwise.
 - Run `uv run pytest` before calling a task done.
+- Hit friction using `sdd` or its skills? Add a line to `docs/friction.md`, keep going.
