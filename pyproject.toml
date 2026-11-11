@@ -1,0 +1,20 @@
+[project]
+name = "sdd-init"
+version = "0.1.0"
+description = "Scaffold projects for spec driven development with progressive disclosure docs for Claude Code"
+readme = "README.md"
+authors = [
+    { name = "Roberto Andradas Izquierdo", email = "randradas@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+sdd = "sdd_init.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
