@@ -16,6 +16,7 @@ PROFILES = {
     p.name: p
     for p in [
         Profile("full", "Full scaffold: product, architecture, conventions, glossary, ADRs, specs, skills", ("base", "full")),
+        Profile("minimal", "Small scaffold: product doc, specs, skills. Add docs as you need them", ("base", "minimal")),
     ]
 }
 DEFAULT_PROFILE = "full"

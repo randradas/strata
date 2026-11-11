@@ -7,6 +7,7 @@ import sys
 from pathlib import Path
 
 from . import __version__
+from .profiles import DEFAULT_PROFILE, get_profile
 from .scaffold import ProjectContext, init_project, list_specs, new_spec
 
 
@@ -21,10 +22,18 @@ def cmd_init(args: argparse.Namespace) -> int:
     target = Path(args.path).resolve()
     interactive = not args.yes and sys.stdin.isatty()
 
+    profile = args.profile or DEFAULT_PROFILE
+    try:
+        get_profile(profile)
+    except ValueError as exc:
+        print(exc, file=sys.stderr)
+        return 1
+
     ctx = ProjectContext(
         name=args.name or ask("Project name", target.name, interactive),
         description=args.description or ask("One-line description", "TODO: describe the project", interactive),
         stack=args.stack or ask("Tech stack", "TODO: list languages, frameworks, infra", interactive),
+        profile=profile,
     )
 
     try:
@@ -69,6 +78,7 @@ def build_parser() -> argparse.ArgumentParser:
     p_init.add_argument("--name", help="Project name (default: directory name)")
     p_init.add_argument("--description", help="One-line project description")
     p_init.add_argument("--stack", help="Tech stack summary")
+    p_init.add_argument("--profile", help=f"Scaffold profile (default: {DEFAULT_PROFILE}); see `sdd profiles`")
     p_init.add_argument("-y", "--yes", action="store_true", help="No prompts, use defaults")
     p_init.add_argument("--force", action="store_true", help="Overwrite existing files")
     p_init.set_defaults(func=cmd_init)
