@@ -1,7 +1,7 @@
 ---
 id: 004-profiles
 title: Profiles
-status: approved
+status: in-progress
 created: 2026-11-11
 ---
 
