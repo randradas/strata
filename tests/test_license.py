@@ -77,8 +77,8 @@ def test_package_declares_mit_and_ships_license_files():
 
 
 # AC5
-def test_version_is_041():
-    assert pyproject()["version"] == __version__ == "0.4.1"
+def test_version_is_042():
+    assert pyproject()["version"] == __version__ == "0.4.2"
 
 
 # AC6

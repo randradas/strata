@@ -142,3 +142,18 @@ def _files(path: Path) -> dict[str, bytes]:
 @pytest.mark.parametrize("shipped,repo", SHARED.items())
 def test_repo_copies_match_shipped(shipped, repo):
     assert _files(Path(str(TEMPLATES / shipped))) == _files(REPO / repo)
+
+
+# Spec 009: question marker. AC1, AC3
+def test_grill_marks_each_question(project):
+    has_all(skill(project, "grill"), "question marker `◈`", "`◈ 7.")
+
+
+# Spec 009: AC2
+def test_grill_marks_only_questions(project):
+    has_all(skill(project, "grill"), "only questions get the marker")
+
+
+# Spec 009: AC5
+def test_glossary_defines_question_marker():
+    assert "**Question marker**:" in (REPO / "docs/glossary.md").read_text()
