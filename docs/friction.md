@@ -26,3 +26,4 @@ Ideas for the next specs. Each one links to the friction it answers, if any.
 | Reverse specs / `strata init --existing`: adopt SDD on a repo that already has code, record built features without hand edits. | `spec new` assumes a new feature | - |
 | Friction-log skill: log a pain point in one step, from any session. | No skill covers the friction log | - |
 | `strata check`: lint a project for leftover TODOs, a growing root agent file, specs stuck in draft, ACs no task covers. Good for CI. | (none yet; idea) | - |
+| Publish to PyPI as `strata-sdd`, so install is `uv tool install strata-sdd` instead of a git URL. | (none yet; idea) | - |
