@@ -1,7 +1,7 @@
 ---
 id: 006-rename
 title: Rename
-status: in-progress
+status: done
 created: 2026-11-11
 ---
 
@@ -20,14 +20,14 @@ is easy to swap with "ssd". The name should say what the tool is about: layered 
 
 ## Acceptance criteria
 
-- [ ] AC1: Given the tool is installed, when I run `strata`, then every current command works (`init`, `spec new`, `spec list`, `profiles`) and help and version say `strata`. (D1)
-- [ ] AC2: Given the tool is installed, when I run `sdd`, then there is no such command. (D2)
-- [ ] AC3: Given the package, when built, then its name is `strata-sdd`, version 0.4.0, and its description is the tagline. (D1, D6, D8, D9)
-- [ ] AC4: Given a new project, when scaffolded, then every file and message names `strata`, never `sdd` as the tool; "SDD" appears only as the method. (D3, D5)
-- [ ] AC5: Given a new project, when scaffolded, then its config file is named after `strata` and records profile and version as before. (D3)
-- [ ] AC6: Given this repo, when the spec is done, then its own process files, docs, glossary and README use `strata`, and the glossary defines SDD and strata. (D3, D4, D5)
-- [ ] AC7: Given this repo, when the spec is merged, then the user gets exact commands to rename the folder and reinstall. (D7)
-- [ ] AC8: Given specs 001-005 and ADRs 0001-0002, when this ships, then they are unchanged; they keep the old name as history. (D10)
+- [x] AC1: Given the tool is installed, when I run `strata`, then every current command works (`init`, `spec new`, `spec list`, `profiles`) and help and version say `strata`. (D1)
+- [x] AC2: Given the tool is installed, when I run `sdd`, then there is no such command. (D2)
+- [x] AC3: Given the package, when built, then its name is `strata-sdd`, version 0.4.0, and its description is the tagline. (D1, D6, D8, D9)
+- [x] AC4: Given a new project, when scaffolded, then every file and message names `strata`, never `sdd` as the tool; "SDD" appears only as the method. (D3, D5)
+- [x] AC5: Given a new project, when scaffolded, then its config file is named after `strata` and records profile and version as before. (D3)
+- [x] AC6: Given this repo, when the spec is done, then its own process files, docs, glossary and README use `strata`, and the glossary defines SDD and strata. (D3, D4, D5)
+- [x] AC7: Given this repo, when the spec is merged, then the user gets exact commands to rename the folder and reinstall. (D7)
+- [x] AC8: Given specs 001-005 and ADRs 0001-0002, when this ships, then they are unchanged; they keep the old name as history. (D10)
 
 ## Out of scope
 
